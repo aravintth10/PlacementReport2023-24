@@ -1,0 +1,269 @@
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-card: #ffffff;
+  --text-primary: #252423;
+  --text-secondary: #605e5c;
+  --accent-blue: #118dff;
+  --border-light: #edebe9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Segoe UI Web (West European)', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+}
+
+/* Intuitive Dashboard Container */
+.dashboard-container-intuitive {
+  min-height: 100vh;
+  padding: 0;
+  background-color: var(--bg-secondary);
+  max-width: 100%;
+  margin: 0;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 16px 32px;
+  position: relative;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-light);
+  gap: 32px;
+}
+
+.dashboard-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.dashboard-subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 600px;
+  margin: 0;
+}
+
+.import-btn-intuitive {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: var(--accent-blue);
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: background-color 0.1s;
+  border: none;
+}
+
+.import-btn-intuitive:hover {
+  background-color: #106ebe;
+}
+
+/* KPI Strip */
+.kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 16px;
+}
+
+.kpi-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 0;
+  padding: 16px;
+  box-shadow: none;
+  transition: none;
+  text-align: center;
+}
+
+.kpi-card:hover {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.kpi-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-bottom: 8px;
+  text-transform: none;
+  line-height: 1.3;
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpi-value-large {
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Chart Sections */
+.chart-section-main {
+  margin-bottom: 8px;
+  padding: 0 16px;
+}
+
+.charts-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 0 16px;
+}
+
+.chart-section-full {
+  margin-bottom: 8px;
+  padding: 0 16px 16px 16px;
+}
+
+.chart-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 0;
+  padding: 16px;
+  box-shadow: none;
+}
+
+.chart-card-full {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 0;
+  padding: 16px;
+  box-shadow: none;
+}
+
+.chart-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chart-scroll-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .charts-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .kpi-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container-intuitive {
+    padding: 16px;
+  }
+  
+  .kpi-strip {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+/* Utility Classes */
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 8px;
+}
+
+.gap-3 {
+  gap: 12px;
+}
+
+.gap-4 {
+  gap: 16px;
+}
+
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.mb-6 {
+  margin-bottom: 24px;
+}
+
+.mb-8 {
+  margin-bottom: 32px;
+}
+
+.mt-8 {
+  margin-top: 32px;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.text-xs {
+  font-size: 12px;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
